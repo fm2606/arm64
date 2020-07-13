@@ -43,7 +43,7 @@ mod:
 
         sdiv    x2, x1, x0      // x2 = x1/x0 ( q = d/n )
         mul     x3, x2, x0      // x3 = x2*x0 ( n*q )
-        sub     x0, x1, x3      // r = d - n*q
+        subs    x0, x1, x3      // r = d - n*q
         cmp     x0, #0
         neg     x1, x0
         csel    x0, x1, x0, lt   // if x0 < 0 : x1 ? x0
